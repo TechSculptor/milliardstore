@@ -91,3 +91,14 @@ a{text-decoration:none;color:inherit}
 .media .icon{width:28px;height:28px;flex:none;fill:#000}
 .media h4{margin:0 0 4px;font-size:1rem}
 .media p{margin:0;color:var(--muted)}
+
+/* Footer */
+.site-footer{margin-top:48px;padding:32px 0;background:#111;color:#fff}
+.site-footer a{color:#fff;text-decoration:underline}
+.footer-grid{display:grid;gap:16px;grid-template-columns:2fr 1fr 1fr 1.2fr}
+.footer-grid h5{margin:0 0 8px;font-size:1rem}
+.footer-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.footer-brand p{margin:12px 0 0;color:#ccc;max-width:28ch}
+address{font-style:normal}
+.legal{border-top:1px solid #2a2a2a;margin-top:16px;padding-top:12px;font-size:.9rem;color:#bbb;text-align:center}
+@media (max-width:900px){.footer-grid{grid-template-columns:1fr}}
