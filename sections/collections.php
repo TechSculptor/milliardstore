@@ -1,12 +1,12 @@
 <?php
 $collections = [
-  ["title" => "Montres",
+  ["title" => "collection MONTRES",
    "img"   => "/assets/img/collection-montres.jpg",
-   "alt"   => "Collection Montres",
+   "alt"   => "collection MONTRES",
    "url"   => "#montres"],
-  ["title" => "Bijoux & accessoires",
+  ["title" => "collection BIJOUX ACCESSOIRES",
    "img"   => "/assets/img/collection-bijoux-accessoires.jpg",
-   "alt"   => "Collection Bijoux et accessoires",
+   "alt"   => "collection BIJOUX ACCESSOIRES",
    "url"   => "#bijoux"],
 ];
 ?>
@@ -20,7 +20,7 @@ $collections = [
           </figure>
           <div class="tile-body">
             <h3><?= htmlspecialchars($c['title']) ?></h3>
-            <a class="link-cta" href="<?= htmlspecialchars($c['url']) ?>">Je découvre →</a>
+            <a class="link-cta" href="<?= htmlspecialchars($c['url']) ?>">JE DÉCOUVRE →</a>
           </div>
         </article>
       <?php endforeach; ?>

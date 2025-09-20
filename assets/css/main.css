@@ -14,21 +14,22 @@ figure{margin:0}
 .site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:10}
 .header-inner{position:relative;display:flex;align-items:center;gap:12px;padding:4px 0;min-height:52px}
 .brand{display:flex;align-items:center;gap:12px}
-.brand-icon{height:28px;width:auto}
+.brand-icon{height:80px;width:auto}                      /* taille du logo */
 .brand-name{display:flex;flex-direction:column;line-height:1;font:700 14px/1 system-ui,Arial;text-transform:uppercase;letter-spacing:.06em;color:#111}
 .main-nav{margin-left:12px}
 .nav{display:flex;gap:16px;list-style:none;margin:0;padding:0}
 .nav a{font-size:.85rem;letter-spacing:.06em;color:#444}
 .nav a:hover{color:#111}
-.actions{margin-left:auto;display:flex;gap:10px;align-items:center}
+.actions{margin-left:auto;display:flex;gap:18px;align-items:center}
 .hamburger{display:none;background:none;border:0;font-size:20px;line-height:1;cursor:pointer}
-.icon-btn svg{width:18px;height:18px;fill:#9aa}
+.icon-btn{width:32px;height:32px;display:grid;place-items:center}
+.icon-btn svg{width:18px;height:18px;fill:rgb(0, 0, 0)}
 .icon-btn:hover svg{fill:#000}
 @media (max-width:900px){
   .hamburger{display:inline-block;position:relative;z-index:1001}
   .nav{display:none}
   .main-nav.open .nav{display:flex;position:absolute;top:calc(100% + 8px);right:0;flex-direction:column;background:#fff;border:1px solid #eee;border-radius:12px;padding:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);min-width:220px;z-index:1000}
-  .brand-icon{height:24px}.brand-name{font-size:13px}
+  .brand-icon{height:32px}.brand-name{font-size:13px}
 }
 
 /* ===== Hero ===== */
@@ -37,10 +38,19 @@ figure{margin:0}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.45),rgba(0,0,0,.15))}
 .hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:14px;color:#fff}
 .hero--center{align-items:center;text-align:center}
-.eyebrow{margin:0;font-size:.95rem;text-transform:uppercase;letter-spacing:.18em;color:#f0f0f0}
-.hero-overlay h1{margin:0 0 2px;max-width:28ch;font-size:clamp(26px,4vw,46px);line-height:1.18;text-shadow:0 2px 8px rgba(0,0,0,.35)}
+.eyebrow{margin:0;font-size:clamp(16px,1.6vw,22px);text-transform:uppercase;letter-spacing:.18em;color:#f0f0f0} /* 3) sur-titre plus grand */
+.hero-overlay h1{margin:0 0 2px;max-width:28ch;font-size:clamp(30px,5vw,56px);line-height:1.18;text-shadow:0 2px 8px rgba(0,0,0,.35)} /* 3) titre plus grand */
 .season{margin:0 0 10px;color:#f5f5f5}
-.btn{display:inline-block;background:#000;color:#fff;padding:10px 18px;border-radius:0}
+.btn{display:inline-block;color:#fff;padding:10px 18px;border-radius:0}
+.hero .btn{background:#6e6e6e} .hero .btn:hover{background:#555}   /* 4) bouton gris */
+
+/* Flèches & dots (5) */
+.hero-arrow{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:0;cursor:pointer;background:rgba(255,255,255,.9);color:#333;font-size:20px;line-height:1;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.hero-arrow.prev{left:12px}.hero-arrow.next{right:12px}
+.hero-arrow:focus-visible{outline:3px solid #000;outline-offset:2px}
+.hero-dots{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:8px}
+.hero-dots .dot{width:10px;height:10px;border-radius:50%;border:2px solid #fff;background:transparent;opacity:.8;cursor:pointer}
+.hero-dots .dot.is-active{background:#fff}
 
 /* ===== Catégories ===== */
 .categories #cat-title{margin:28px 0 10px;text-align:center;text-transform:uppercase;letter-spacing:.08em;font:700 1.7rem/1.2 Georgia,"Times New Roman",serif;color:#1a1a1a}
@@ -58,11 +68,15 @@ figure{margin:0}
 .card::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.28),rgba(0,0,0,.07))}
 .card-title{position:absolute;left:12px;top:12px;margin:0;color:#fff;font-weight:600;font-size:1rem;text-shadow:0 1px 4px rgba(0,0,0,.35);display:inline-flex;align-items:center;gap:8px}
 .card-title::after{content:"→"}
+.cat-femmes .card-title{color:#000;text-shadow:none}               /* 6) femmes en noir */
 .card-arrow{display:none}
 @media (max-width:1200px){.cats{grid-template-columns:repeat(3,1fr);grid-auto-rows:190px}.cat-hommes{grid-column:1 / span 3;grid-row:auto}}
 @media (max-width:680px){.cats{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}.cat-hommes{grid-column:1 / span 2}}
 
 /* ===== Collections ===== */
+.section.categories{padding-bottom:0;margin-bottom:0}              /* 8) pas d'espace */
+.section.collections{padding-top:0;margin-top:0}
+.cols-title{margin:10px 0 18px;text-align:center;text-transform:uppercase;letter-spacing:.08em;font:700 1rem/1.2 Georgia,serif;color:#1a1a1a} /* 9) titre "Collections" */
 .tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 @media (max-width:900px){.tiles{grid-template-columns:1fr}}
 .tile{position:relative;border-radius:0;overflow:hidden}
@@ -70,17 +84,17 @@ figure{margin:0}
 .tile-media img{width:100%;height:100%;object-fit:cover;object-position:center}
 .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.35),rgba(0,0,0,.12))}
 .tile-body{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;color:#fff;text-align:center}
-.tile-body h3{margin:0;font-size:1.25rem;text-shadow:0 2px 8px rgba(0,0,0,.35)}
-.link-cta{display:inline-block;background:#000;color:#fff;border-radius:0;height:48px;line-height:48px;padding:0 16px}
+.tile-body h3{margin:0;font-size:1.25rem;text-shadow:0 2px 8px rgba(0,0,0,.35);text-transform:uppercase}
+.link-cta{display:inline-block;background:#000;color:#fff;border-radius:0;height:40px;line-height:40px;padding:0 16px}
 .link-cta:hover{background:#111}
 
-/* ===== Rassurance ===== */
+/* ===== Rassurance (10) ===== */
 .media-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media (max-width:900px){.media-list{grid-template-columns:1fr}}
-.media{display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;padding:18px;border-radius:12px}
-.icon-img{width:28px;height:28px;object-fit:contain;margin-bottom:8px;opacity:.9}
-.media h4{margin:0 0 4px;font-size:.95rem;color:#111}
-.media p{margin:0;color:#555;max-width:32ch;font-size:.9rem}
+.media{display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;padding:18px;border-radius:12px;gap:8px}
+.icon-img{width:44px;height:44px;object-fit:contain;opacity:.95}
+.media h4{margin:0 0 4px;font-size:1.05rem}
+.media p{margin:0;color:#555;max-width:32ch;font-size:.95rem}
 
 /* ===== Newsletter ===== */
 .newsletter-bar{background:#353535;padding:14px 0;border-top:1px solid #ddd;border-bottom:1px solid #ddd}
@@ -88,10 +102,10 @@ figure{margin:0}
 .nl-inner h3{margin:0;font-size:.95rem;letter-spacing:.06em;color:#fff}
 .nl-form{display:flex;gap:8px;justify-content:center;margin:0 auto;width:clamp(480px,70vw,960px)}
 .nl-form input[type="email"]{height:48px;padding:0 12px;border:1px solid #ccc;border-radius:0;font:inherit;min-width:420px;max-width:820px}
-.nl-form button{width:48px;height:48px;padding:0;border:0;border-radius:0;background:#000;color:#fff;display:grid;place-items:center;cursor:pointer}
+.nl-form button{width:116px;height:48px;padding:0;border:0;border-radius:0;background:#000;color:#fff;display:grid;place-items:center;cursor:pointer}
 .nl-form button:hover{background:#111}
 
-/* ===== Footer ===== */
+/* ===== Footer (11) ===== */
 .site-footer{margin-top:0;padding:28px 0;background:#fff;color:#000;border-top:1px solid #eee}
 .site-footer a{color:#000;text-decoration:none}
 .footer-grid{display:grid;gap:16px;grid-template-columns:2fr 1fr 1fr 1.2fr}
@@ -101,8 +115,7 @@ figure{margin:0}
 .footer-brand{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px}
 .footer-brand .brand-logo{height:100px;width:auto}
 .footer-brand .brand-desc{margin:0;max-width:48ch;color:#787878}
-.footer-col.center{text-align:center}
-.footer-grid nav.footer-col.center[aria-label="Nos produits"]{text-align:left}
+.footer-col{ text-align:left }
 .footer-contact{font-style:normal}
 .footer-contact p{margin:.3rem 0;color:#444}
 .legal{border-top:1px solid #eee;margin-top:16px;padding-top:12px;font-size:.9rem;color:#666;display:flex;align-items:center;justify-content:space-between}

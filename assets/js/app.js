@@ -27,3 +27,12 @@ document.querySelectorAll('.hero-arrow').forEach(b=>{
   b.addEventListener('click', e => e.preventDefault());
 });
 
+// Brancher au slider si on ajoute plusieurs slides.
+document.querySelectorAll('.hero-dots .dot').forEach((b,i,all)=>{
+  b.addEventListener('click',()=>{
+    all.forEach(x=>x.classList.remove('is-active'));
+    b.classList.add('is-active');
+  });
+});
+
+
