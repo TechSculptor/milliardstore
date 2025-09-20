@@ -83,3 +83,11 @@ a{text-decoration:none;color:inherit}
 .tile-body h3{margin:0 0 6px;font-size:1.25rem}
 .link-cta{font-weight:600;text-decoration:underline}
 .link-cta:focus-visible{outline:3px solid #000;outline-offset:3px}
+
+/* Rassurance */
+.media-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+@media (max-width:900px){.media-list{grid-template-columns:1fr}}
+.media{display:flex;gap:12px;align-items:flex-start;background:#f7f7f7;padding:16px;border-radius:12px}
+.media .icon{width:28px;height:28px;flex:none;fill:#000}
+.media h4{margin:0 0 4px;font-size:1rem}
+.media p{margin:0;color:var(--muted)}
