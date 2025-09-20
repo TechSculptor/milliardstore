@@ -8,11 +8,11 @@ Première version : header (logo + menu + icônes) et hero “Élégance & préc
 - Lancer Apache depuis XAMPP Control Panel
 - Ouvrir le site dans votre navigateur :
 
-  - Avec VirtualHost : [http://milliardstore.local/](http://milliardstore.local/)  
-  - Sans VirtualHost : [http://localhost/milliardstore/](http://localhost/milliardstore/)
+  - Avec VirtualHost : http://milliardstore.local/
+  - Sans VirtualHost : http://localhost/milliardstore/
 
 ## Contenu
 - `index.php`
 - `assets/css/main.css`
-- `assets/js/app.js` (menu mobile)
-- `assets/img/hero-480.jpg`, `hero-800.jpg`, `hero-1600.jpg`, `logo1.png`, `logo2.jpg`
+- `assets/js/app.js` (pour le menu mobile)
+- `assets/img

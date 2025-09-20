@@ -71,6 +71,8 @@
     </div>
   </section>
 
+  <?php include __DIR__.'/sections/categories.php'; ?>
+
   <script src="/assets/js/app.js" defer></script>
 
 </body>
