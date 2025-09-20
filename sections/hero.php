@@ -10,10 +10,15 @@
            sizes="(max-width:600px) 100vw, (max-width:1024px) 90vw, 1280px" />
     </picture>
 
-    <div class="hero-overlay container">
-      <p class="eyebrow">ÉLÉGANCE & PRÉCISION</p>
-      <h1 id="hero-title">Montres sophistiquées pour chaque instant.</h1>
-      <p class="season">Automne–Hiver 2024</p>
-      <a class="btn" href="#montres">Découvrir →</a>
+    <div class="hero-overlay container hero--center">
+      <p class="eyebrow">Style intemporel</p>
+      <h1 id="hero-title">Milliardstore – des montres qui ne se démodent jamais</h1>
+      <p class="season">Printemps–été 2025</p>
+      <a class="btn" href="#montres">Je découvre →</a>
     </div>
+
+    <button class="hero-arrow prev" aria-label="Précédent">❮</button>
+    <button class="hero-arrow next" aria-label="Suivant">❯</button>
+
+
   </section>

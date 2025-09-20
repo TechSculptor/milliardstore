@@ -1,12 +1,17 @@
 <?php
 $collections = [
-  ["title" => "Montres", "img" => "/assets/img/cat-hommes.jpg", "alt" => "Montres", "url" => "#montres"],
-  ["title" => "Bijoux & accessoires", "img" => "/assets/img/cat-femmes.jpg", "alt" => "Bijoux & accessoires", "url" => "#bijoux"],
+  ["title" => "Montres",
+   "img"   => "/assets/img/collection-montres.jpg",
+   "alt"   => "Collection Montres",
+   "url"   => "#montres"],
+  ["title" => "Bijoux & accessoires",
+   "img"   => "/assets/img/collection-bijoux-accessoires.jpg",
+   "alt"   => "Collection Bijoux et accessoires",
+   "url"   => "#bijoux"],
 ];
 ?>
 <section id="collections" class="section collections" aria-labelledby="col-title">
   <div class="container">
-    <h2 id="col-title" class="sr-only">Collections</h2>
     <div class="tiles">
       <?php foreach ($collections as $c): ?>
         <article class="tile">

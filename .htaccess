@@ -1,0 +1,10 @@
+# Manifest MIME
+AddType application/manifest+json .webmanifest
+
+# Cache long pour icônes
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/png    "access plus 1 year"
+  ExpiresByType application/manifest+json "access plus 7 days"
+</IfModule>

@@ -1,6 +1,6 @@
 // assets/js/app.js
 
-// Menu mobile (ouvre/ferme la navigation).
+// Ouvre/ferme la navigation du menu mobile.
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("menuToggle");
   const nav = document.getElementById("mainNav");
@@ -21,3 +21,9 @@ document.addEventListener("click", (e) => {
   const clickedInside = nav.contains(e.target) || btn.contains(e.target);
   if (!clickedInside) nav.classList.remove("open");
 });
+
+// Pour que les flèches du hero n’attrapent pas le clic.
+document.querySelectorAll('.hero-arrow').forEach(b=>{
+  b.addEventListener('click', e => e.preventDefault());
+});
+
