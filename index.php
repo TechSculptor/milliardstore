@@ -73,6 +73,8 @@
 
   <?php include __DIR__.'/sections/categories.php'; ?>
 
+  <?php include __DIR__.'/sections/collections.php'; ?>
+
   <script src="/assets/js/app.js" defer></script>
 
 </body>
