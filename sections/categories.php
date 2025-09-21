@@ -1,4 +1,4 @@
-<?php
+<?php // sections/categories.php
 $categories = [
   ["slug"=>"femmes",     "title"=>"Montres pour femme",      "url"=>"#femmes",     "img"=>"/assets/img/cat-femmes.jpg",     "alt"=>"Montres pour femmes"],
   ["slug"=>"hommes",     "title"=>"Montres pour homme",      "url"=>"#hommes",     "img"=>"/assets/img/cat-hommes.jpg",     "alt"=>"Montres pour hommes"],

@@ -1,10 +1,10 @@
-<?php
+<?php // sections/collections.php
 $collections = [
-  ["title" => "collection MONTRES",
+  ["kicker" => "collection", "title" => "MONTRES",
    "img"   => "/assets/img/collection-montres.jpg",
    "alt"   => "collection MONTRES",
    "url"   => "#montres"],
-  ["title" => "collection BIJOUX ACCESSOIRES",
+  ["kicker" => "collection", "title" => "BIJOUX ACCESSOIRES",
    "img"   => "/assets/img/collection-bijoux-accessoires.jpg",
    "alt"   => "collection BIJOUX ACCESSOIRES",
    "url"   => "#bijoux"],
@@ -19,7 +19,10 @@ $collections = [
             <img src="<?= htmlspecialchars($c['img']) ?>" alt="<?= htmlspecialchars($c['alt']) ?>" loading="lazy">
           </figure>
           <div class="tile-body">
-            <h3><?= htmlspecialchars($c['title']) ?></h3>
+            <h3 class="tile-title">
+              <span class="kicker"><?= htmlspecialchars($c['kicker']) ?></span>
+              <strong><?= htmlspecialchars($c['title']) ?></strong>
+            </h3>
             <a class="link-cta" href="<?= htmlspecialchars($c['url']) ?>">JE DÉCOUVRE →</a>
           </div>
         </article>

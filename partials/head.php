@@ -1,8 +1,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Milliardstore : montres et accessoires. Découvrez une sélection soignée, livraison rapide et paiement sécurisé.">
 
 <title><?= isset($title) ? $title : 'Milliardstore — Élégance & précision' ?></title>
 <link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload"
+      as="image"
+      imagesrcset="/assets/img/hero-480.webp 480w, /assets/img/hero-800.webp 800w, /assets/img/hero-1600.webp 1600w"
+      imagesizes="(max-width:600px) 100vw, (max-width:1024px) 90vw, 1280px"
+      href="/assets/img/hero-800.webp">
 
 <!-- Favicon & icônes -->
 <link rel="icon" href="/assets/img/favicon.ico" sizes="any">                                  <!-- ICO legacy -->
